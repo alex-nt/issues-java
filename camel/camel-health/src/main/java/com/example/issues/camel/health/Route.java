@@ -17,13 +17,13 @@ public class Route extends RouteBuilder {
                 .routeId("timer-hello")
                 .log("Hello Timer ${exchangeProperty.CamelTimerCounter}")
                 .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
-                .to(String.format("http://localhost:%d/actuator/health", port))
+                .to(String.format("http://localhost:%d/actuator/health?throwExceptionOnFailure=false", port))
                 .log("HEALTH ${body}")
                 .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
-                .to(String.format("http://localhost:%d/actuator/health/liveness", port))
+                .to(String.format("http://localhost:%d/actuator/health/liveness?throwExceptionOnFailure=false", port))
                 .log("LIVENESS ${body}")
                 .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
-                .to(String.format("http://localhost:%d/actuator/health/readiness", port))
+                .to(String.format("http://localhost:%d/actuator/health/readiness?throwExceptionOnFailure=false", port))
                 .log("READINESS ${body}");
 
         from("kafka:hello")
