@@ -28,6 +28,6 @@ public class Route extends RouteBuilder {
 
         from("kafka:hello")
                 .routeId("kafka")
-                .log("Hello Kafka ${exchangeProperty.CamelTimerCounter}");
+                .log("Hello Kafka");
     }
 }
