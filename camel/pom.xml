@@ -11,6 +11,7 @@
     <name>Issues :: Camel</name>
 
     <modules>
+        <module>camel-health</module>
         <module>kafka-idempotent</module>
     </modules>
 </project>
