@@ -13,5 +13,6 @@
     <modules>
         <module>camel-health</module>
         <module>kafka-idempotent</module>
+        <module>camel-xpath</module>
     </modules>
 </project>

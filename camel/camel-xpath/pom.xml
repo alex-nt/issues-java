@@ -5,17 +5,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.11</version>
+        <version>3.2.2</version>
         <relativePath/>
     </parent>
 
     <groupId>com.example.issues.camel</groupId>
-    <artifactId>kafka-idempotent</artifactId>
+    <artifactId>issues-camel-xpath</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Issues :: Camel :: Kafka Idempotent Repository</name>
+    <name>Issues :: Camel :: Camel XPath</name>
 
     <properties>
-        <camel.version>3.20.3</camel.version>
+        <camel.version>4.4.0</camel.version>
     </properties>
 
     <dependencies>
@@ -30,7 +30,12 @@
         </dependency>
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-kafka-starter</artifactId>
+            <artifactId>camel-xpath-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-saxon-starter</artifactId>
             <version>${camel.version}</version>
         </dependency>
 
@@ -39,17 +44,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
