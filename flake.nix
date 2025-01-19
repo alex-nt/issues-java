@@ -25,7 +25,6 @@
           default = pkgs.mkShell {
             packages = [
               pkgs-unstable.maven
-              pkgs-unstable.jetbrains.idea-community
               pkgs.jdk17
             ];
             shellHook = ''
